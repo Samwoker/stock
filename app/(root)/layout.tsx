@@ -5,7 +5,7 @@ import { headers } from "next/headers"
 
 const layout = async ({children}:{children:React.ReactNode}) => {
 
-
+  
   const session = await auth.api.getSession({
     headers:await headers()
   })

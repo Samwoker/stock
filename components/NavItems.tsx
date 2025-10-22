@@ -6,7 +6,7 @@ import SearchCommand from "./SearchCommand"
 import { symbol } from "better-auth"
 
 
-const NavItems = ({initialStocks}:{initialStocks:StockWithWatchlistStatus}) => {
+const NavItems = ({initialStocks}:{initialStocks:StockWithWatchlistStatus[]}) => {
     const  pathname = usePathname()
     const isActive =(path:string)=>{
         if(path === '/') return pathname === '/'
@@ -21,7 +21,7 @@ const NavItems = ({initialStocks}:{initialStocks:StockWithWatchlistStatus}) => {
             <SearchCommand 
             renderAs = "text"
             label = "Search"
-            initialStocks={initialStocks}
+            initialStocks= {initialStocks}
             />
            </li> 
         )
